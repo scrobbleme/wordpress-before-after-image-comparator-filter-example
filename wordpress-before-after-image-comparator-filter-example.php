@@ -52,7 +52,7 @@ function ic_comparator_right_image_filter($right_image_content, $shortcode_param
  */
 function ic_comparator_content_filter($content, $shortcode_parameters)
 {
-    //** We add a space add the first position to avoid collisions with right-login-required and left-login-required */
+    //** We add a space at the first position to avoid collisions with right-login-required and left-login-required */
     if (strpos(' ' . $shortcode_parameters['classes'], ' login-required') !== false && !is_user_logged_in()) {
         return '<h1>Please login to see the image comparator.</h1>';
     }
